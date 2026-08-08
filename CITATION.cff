@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+
+message: "Please cite this software."
+
+title: "RAREGuard: A Hybrid One-Class Anomaly Detection Framework with Fully Unsupervised Thresholding"
+
+type: software
+
+authors:
+
+- family-names: Mniko
+  given-names: Mniko Simon
+
+- family-names: Mwangi
+  given-names: Waweru
+
+- family-names: Karanja
+  given-names: Evanson Mwangi
+
+version: 1.0.0
+
+date-released: 2026-08-05
+
+license: MIT
+
+keywords:
+
+- fraud detection
+- anomaly detection
+- ensemble learning
+- one-class learning
+- unsupervised thresholding
