@@ -1,17 +1,17 @@
+# raw datasets are not redistributed (see data/README.md)
+data/raw/
+*.csv.gz
+creditcard.csv
+PS_20174392719_1491204439457_log.csv
+# copies kept by rg.Run when a result is replaced
+results/**/_archive/
+# Python / Jupyter
 __pycache__/
-
-.ipynb_checkpoints/
-
 *.pyc
-
-*.pyo
-
-.DS_Store
-
-Thumbs.db
-
-*.tmp
-
+.ipynb_checkpoints/
+# LaTeX build files
+*.aux
 *.log
-
-data/raw/creditcard.csv
+*.out
+*.bbl
+*.blg

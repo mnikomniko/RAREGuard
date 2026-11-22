@@ -1,8 +1,8 @@
-numpy
-pandas
+# Versions recorded in results/*/run_info.json for the archived runs
+# (Google Colab, Python 3.13.16, NVIDIA Tesla T4). matplotlib is only needed for notebook 09.
+numpy==2.4.6
+pandas==2.2.3
+scikit-learn==1.6.1
+scipy==1.16.3
+torch==2.14.1
 matplotlib
-scikit-learn
-scipy
-torch
-openpyxl
-jupyter

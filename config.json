@@ -1,0 +1,80 @@
+{
+  "project": "RAREGuard",
+  "data": {
+    "ulb_csv": "/content/drive/MyDrive/PhD/creditcard.csv",
+    "paysim_csv": "/content/drive/MyDrive/PhD/PS_20174392719_1491204439457_log.csv"
+  },
+  "seeds": [
+    42,
+    7,
+    21,
+    100,
+    2026
+  ],
+  "split": {
+    "test_size": 0.3,
+    "val_share_of_rest": 0.5
+  },
+  "features": {
+    "knn_impute_k": 5,
+    "variance_threshold": 1e-05,
+    "laplacian_k": 10,
+    "laplacian_sample": 5000,
+    "n_features": 20,
+    "pca_variance": 0.95
+  },
+  "detectors": {
+    "if_trees": 300,
+    "ocsvm_nu": 0.002,
+    "ocsvm_max_rows": 30000,
+    "ae_lr": 0.001,
+    "ae_batch": 1024,
+    "ae_epochs": 30,
+    "ae_patience": 5,
+    "ae_heldout_share": 0.1
+  },
+  "fusion_weights": {
+    "IF": 0.3,
+    "OCSVM": 0.3,
+    "AE": 0.4
+  },
+  "contamination": 0.002,
+  "label_assisted": {
+    "pmin": 80,
+    "pmax": 99.9,
+    "ngrid": 200
+  },
+  "e5_contamination_grid": [
+    0.001,
+    0.0015,
+    0.002,
+    0.003,
+    0.005
+  ],
+  "e6": {
+    "reference_size": 30000,
+    "fraud_shares": [
+      0.0,
+      0.001,
+      0.002,
+      0.005,
+      0.01
+    ]
+  },
+  "e8": {
+    "sizes": [
+      50000,
+      100000,
+      150000,
+      200000,
+      250000,
+      "all"
+    ],
+    "seed": 42
+  },
+  "paysim": {
+    "max_rows": 300000,
+    "sample_seed": 31415,
+    "ae_early_stopping": "heldout"
+  }
+}

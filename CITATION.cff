@@ -1,32 +1,36 @@
 cff-version: 1.2.0
-
-message: "Please cite this software."
-
-title: "RAREGuard: A Hybrid One-Class Anomaly Detection Framework with Fully Unsupervised Thresholding"
-
-type: software
-
-authors:
-
-- family-names: Mniko
-  given-names: Mniko Simon
-
-- family-names: Mwangi
-  given-names: Waweru
-
-- family-names: Karanja
-  given-names: Evanson Mwangi
-
-version: 1.0.0
-
-date-released: 2026-08-05
-
+message: "If you use this software or its results, please cite it as below."
+title: "RAREGuard: Hybrid one-class fraud detection with fraud-label-free threshold calibration"
+version: 2.0.0
+date-released: 2026-11-22
+doi: 10.5281/zenodo.XXXXXXXX   # replace with the version DOI Zenodo assigns to release v2.0.0
 license: MIT
-
+repository-code: "https://github.com/mnikomniko/RAREGuard"
+type: software
+authors:
+  - family-names: Mniko
+    given-names: Mniko Simon
+    affiliation: "Department of Information Technology, Jomo Kenyatta University of Agriculture and Technology"
+    email: mniko.mniko@students.jkuat.ac.ke
+  - family-names: Mwangi
+    given-names: Waweru
+    affiliation: "Department of Computing, Jomo Kenyatta University of Agriculture and Technology"
+  - family-names: Karanja
+    given-names: Evanson Mwangi
+    affiliation: "Jomo Kenyatta University of Agriculture and Technology"
 keywords:
-
-- fraud detection
-- anomaly detection
-- ensemble learning
-- one-class learning
-- unsupervised thresholding
+  - fraud detection
+  - anomaly detection
+  - one-class classification
+  - class imbalance
+  - threshold calibration
+  - autoencoder
+  - isolation forest
+  - one-class SVM
+abstract: >-
+  Code, fixed data splits, per-split results, statistics and manuscript figures for
+  RAREGuard, a score-level fusion of isolation forest, one-class SVM and autoencoder
+  detectors with a percentile threshold computed from unlabelled validation scores.
+  The study evaluates fusion rules and weights, label-free threshold estimators, the
+  assumed contamination rate, fraud in the legitimate training reference, and transfer
+  from the ULB credit card dataset to PaySim.

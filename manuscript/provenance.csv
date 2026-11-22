@@ -1,0 +1,15 @@
+Manuscript_Item,Output,Source,Notebook,Run_Finished,Device,Lib_Version,Source_MD5
+Figure 2,manuscript/figures/fig_pr_seed42.pdf,results/E1_components/scores/ulb_seed42.npz,01_E1_components.ipynb,2026-11-22T14:08:21,Tesla T4,1.0,ac1bc5698f744f967e60ac789426bfe4
+Figure 3,manuscript/figures/fig_fusion.pdf,results/E2_E3_fusion/fusion_baselines_summary.csv,02_E2_E3_fusion.ipynb,2026-11-22T14:11:48,Tesla T4,1.0,8b80cffd87394209212a5edc4376f020
+Figure 4,manuscript/figures/fig_threshold_c.pdf,results/E4_E5_thresholds/assumed_contamination_summary.csv,03_E4_E5_thresholds.ipynb,2026-11-22T14:15:50,Tesla T4,1.0,a346591f10c0868ec32b94e2ce9b21d7
+Figure 5,manuscript/figures/fig_contamination.pdf,results/E6_reference_contamination/reference_contamination_summary.csv,04_E6_reference_contamination.ipynb,2026-11-22T14:22:32,Tesla T4,1.0,5c950bc36f280539cd248e83e10898a4
+Table 1,manuscript/tables/tab_main.tex,results/E1_components/summary_mean_sd.csv,01_E1_components.ipynb,2026-11-22T14:08:21,Tesla T4,1.0,5acdaf3fcbfa784672e6653ee8daec18
+Table 2,manuscript/tables/tab_fusion.tex,results/E2_E3_fusion/fusion_baselines_by_seed.csv,02_E2_E3_fusion.ipynb,2026-11-22T14:11:48,Tesla T4,1.0,b42ab0a52c50d00f08f32cd29d6cb40f
+Table 2,manuscript/tables/tab_fusion.tex,results/stats/paired_tests.csv,08_statistics.ipynb,2026-11-22T14:55:46,Tesla T4,1.0,64501256ea1d08e0bc0cffad55c9eedf
+Table 3,manuscript/tables/tab_threshold.tex,results/E4_E5_thresholds/threshold_methods_summary.csv,03_E4_E5_thresholds.ipynb,2026-11-22T14:15:50,Tesla T4,1.0,f5307892bfc8a6e05733d9052aa0f834
+Table 3,manuscript/tables/tab_threshold.tex,results/stats/paired_tests.csv,08_statistics.ipynb,2026-11-22T14:55:46,Tesla T4,1.0,64501256ea1d08e0bc0cffad55c9eedf
+Table 4,manuscript/tables/tab_contam.tex,results/E6_reference_contamination/reference_contamination_summary.csv,04_E6_reference_contamination.ipynb,2026-11-22T14:22:32,Tesla T4,1.0,5c950bc36f280539cd248e83e10898a4
+Table 4,manuscript/tables/tab_contam.tex,results/stats/paired_tests.csv,08_statistics.ipynb,2026-11-22T14:55:46,Tesla T4,1.0,64501256ea1d08e0bc0cffad55c9eedf
+Table 5,manuscript/tables/tab_cost.tex,results/E8_cost/cost_by_configuration.csv,06_E8_cost_scalability.ipynb,2026-11-22T14:34:41,Tesla T4,1.0,598f8499e81874826bb65a962020d644
+Table 6,manuscript/tables/tab_paysim.tex,results/E9_paysim/representation_summary.csv,07_E9_paysim.ipynb,2026-11-22T14:50:33,Tesla T4,1.0,d454ae0c554916e623f8adea3c833f17
+Table 6,manuscript/tables/tab_paysim.tex,results/stats/paired_tests.csv,08_statistics.ipynb,2026-11-22T14:55:46,Tesla T4,1.0,64501256ea1d08e0bc0cffad55c9eedf

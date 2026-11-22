@@ -1,0 +1,47 @@
+{
+  "upload_type": "software",
+  "title": "RAREGuard: Hybrid one-class fraud detection with fraud-label-free threshold calibration",
+  "version": "2.0.0",
+  "publication_date": "2026-11-22",
+  "creators": [
+    {
+      "name": "Mniko, Mniko Simon",
+      "affiliation": "Jomo Kenyatta University of Agriculture and Technology"
+    },
+    {
+      "name": "Mwangi, Waweru",
+      "affiliation": "Jomo Kenyatta University of Agriculture and Technology"
+    },
+    {
+      "name": "Karanja, Evanson Mwangi",
+      "affiliation": "Jomo Kenyatta University of Agriculture and Technology"
+    }
+  ],
+  "description": "<p>Reproducibility package for the article <em>Hybrid One-Class Fraud Detection Under Extreme Class Imbalance: Label-Free Threshold Calibration and Sensitivity to Training-Reference Contamination</em> (submitted to IEEE Access).</p><p>Contains the shared code module, ten Google Colab notebooks (experiments E1-E9, statistics, and manuscript figures and tables), the configuration, per-split results for every experiment with run metadata (software versions, hardware, file hashes), paired tests with Holm correction, and the figures and tables used in the article. The raw datasets (ULB credit card fraud and PaySim) are not redistributed; see data/README.md.</p><p>Version 2.0.0 restructures version 1.0.0 and regenerates all results. See CHANGELOG.md.</p>",
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "fraud detection",
+    "anomaly detection",
+    "one-class classification",
+    "class imbalance",
+    "threshold calibration",
+    "autoencoder",
+    "isolation forest",
+    "one-class SVM",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.21852872",
+      "relation": "isNewVersionOf",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/mnikomniko/RAREGuard/tree/v2.0.0",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Code: MIT License. Result files, figures and tables: CC BY 4.0."
+}
