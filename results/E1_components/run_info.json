@@ -1,0 +1,151 @@
+{
+  "experiment": "E1_components",
+  "notebook": "01_E1_components.ipynb",
+  "description": "Component comparison on ULB, both threshold modes",
+  "started": "2026-11-22T13:56:45",
+  "finished": "2026-11-22T14:08:21",
+  "minutes": 11.6,
+  "seeds": [
+    42,
+    7,
+    21,
+    100,
+    2026
+  ],
+  "notes": "",
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.4.6",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.6.1",
+    "scipy": "1.16.3",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "cpu_count": 2,
+    "rareguard_lib": "1.0",
+    "rareguard_lib_md5": "0ffc35a19a14ac38b8368451218abf8e",
+    "torch": "2.14.1+cu130",
+    "device": "Tesla T4"
+  },
+  "config": {
+    "project": "RAREGuard",
+    "data": {
+      "ulb_csv": "/content/drive/MyDrive/PhD/creditcard.csv",
+      "paysim_csv": "/content/drive/MyDrive/PhD/PS_20174392719_1491204439457_log.csv"
+    },
+    "seeds": [
+      42,
+      7,
+      21,
+      100,
+      2026
+    ],
+    "split": {
+      "test_size": 0.3,
+      "val_share_of_rest": 0.5
+    },
+    "features": {
+      "knn_impute_k": 5,
+      "variance_threshold": 1e-05,
+      "laplacian_k": 10,
+      "laplacian_sample": 5000,
+      "n_features": 20,
+      "pca_variance": 0.95
+    },
+    "detectors": {
+      "if_trees": 300,
+      "ocsvm_nu": 0.002,
+      "ocsvm_max_rows": 30000,
+      "ae_lr": 0.001,
+      "ae_batch": 1024,
+      "ae_epochs": 30,
+      "ae_patience": 5,
+      "ae_heldout_share": 0.1
+    },
+    "fusion_weights": {
+      "IF": 0.3,
+      "OCSVM": 0.3,
+      "AE": 0.4
+    },
+    "contamination": 0.002,
+    "label_assisted": {
+      "pmin": 80,
+      "pmax": 99.9,
+      "ngrid": 200
+    },
+    "e5_contamination_grid": [
+      0.001,
+      0.0015,
+      0.002,
+      0.003,
+      0.005
+    ],
+    "e6": {
+      "reference_size": 30000,
+      "fraud_shares": [
+        0.0,
+        0.001,
+        0.002,
+        0.005,
+        0.01
+      ]
+    },
+    "e8": {
+      "sizes": [
+        50000,
+        100000,
+        150000,
+        200000,
+        250000,
+        "all"
+      ],
+      "seed": 42
+    },
+    "paysim": {
+      "max_rows": 300000,
+      "sample_seed": 31415,
+      "ae_early_stopping": "heldout"
+    }
+  },
+  "files": [
+    {
+      "file": "results/E1_components/scores/ulb_seed42.npz",
+      "rows": null,
+      "md5": "ac1bc5698f744f967e60ac789426bfe4"
+    },
+    {
+      "file": "results/E1_components/scores/ulb_seed7.npz",
+      "rows": null,
+      "md5": "de3b263f0799d3f5cd6de1c05edd81d0"
+    },
+    {
+      "file": "results/E1_components/scores/ulb_seed21.npz",
+      "rows": null,
+      "md5": "e50f545801437a8e44ebec97f196fd91"
+    },
+    {
+      "file": "results/E1_components/scores/ulb_seed100.npz",
+      "rows": null,
+      "md5": "0c258ace4325508456b1b45c1205574a"
+    },
+    {
+      "file": "results/E1_components/scores/ulb_seed2026.npz",
+      "rows": null,
+      "md5": "d50954e8c8ef7bf260cc44ff122c5b71"
+    },
+    {
+      "file": "results/E1_components/runs_by_seed.csv",
+      "rows": 60,
+      "md5": "6bb43e7e709443f4b3c2e9c411658948"
+    },
+    {
+      "file": "results/E1_components/summary_mean_sd.csv",
+      "rows": 12,
+      "md5": "5acdaf3fcbfa784672e6653ee8daec18"
+    },
+    {
+      "file": "results/E1_components/features_by_seed.csv",
+      "rows": 15,
+      "md5": "03b24099870d2ba28d75d8e8cd00546f"
+    }
+  ]
+}

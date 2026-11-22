@@ -1,0 +1,131 @@
+{
+  "experiment": "E4_E5_thresholds",
+  "notebook": "03_E4_E5_thresholds.ipynb",
+  "description": "Threshold estimators (E4) and assumed contamination (E5)",
+  "started": "2026-11-22T14:15:28",
+  "finished": "2026-11-22T14:15:50",
+  "minutes": 0.37,
+  "seeds": [
+    42,
+    7,
+    21,
+    100,
+    2026
+  ],
+  "notes": "",
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.4.6",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.6.1",
+    "scipy": "1.16.3",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "cpu_count": 2,
+    "rareguard_lib": "1.0",
+    "rareguard_lib_md5": "0ffc35a19a14ac38b8368451218abf8e",
+    "torch": "2.14.1+cu130",
+    "device": "Tesla T4"
+  },
+  "config": {
+    "project": "RAREGuard",
+    "data": {
+      "ulb_csv": "/content/drive/MyDrive/PhD/creditcard.csv",
+      "paysim_csv": "/content/drive/MyDrive/PhD/PS_20174392719_1491204439457_log.csv"
+    },
+    "seeds": [
+      42,
+      7,
+      21,
+      100,
+      2026
+    ],
+    "split": {
+      "test_size": 0.3,
+      "val_share_of_rest": 0.5
+    },
+    "features": {
+      "knn_impute_k": 5,
+      "variance_threshold": 1e-05,
+      "laplacian_k": 10,
+      "laplacian_sample": 5000,
+      "n_features": 20,
+      "pca_variance": 0.95
+    },
+    "detectors": {
+      "if_trees": 300,
+      "ocsvm_nu": 0.002,
+      "ocsvm_max_rows": 30000,
+      "ae_lr": 0.001,
+      "ae_batch": 1024,
+      "ae_epochs": 30,
+      "ae_patience": 5,
+      "ae_heldout_share": 0.1
+    },
+    "fusion_weights": {
+      "IF": 0.3,
+      "OCSVM": 0.3,
+      "AE": 0.4
+    },
+    "contamination": 0.002,
+    "label_assisted": {
+      "pmin": 80,
+      "pmax": 99.9,
+      "ngrid": 200
+    },
+    "e5_contamination_grid": [
+      0.001,
+      0.0015,
+      0.002,
+      0.003,
+      0.005
+    ],
+    "e6": {
+      "reference_size": 30000,
+      "fraud_shares": [
+        0.0,
+        0.001,
+        0.002,
+        0.005,
+        0.01
+      ]
+    },
+    "e8": {
+      "sizes": [
+        50000,
+        100000,
+        150000,
+        200000,
+        250000,
+        "all"
+      ],
+      "seed": 42
+    },
+    "paysim": {
+      "max_rows": 300000,
+      "sample_seed": 31415,
+      "ae_early_stopping": "heldout"
+    }
+  },
+  "files": [
+    {
+      "file": "results/E4_E5_thresholds/threshold_methods_by_seed.csv",
+      "rows": 25,
+      "md5": "4b8f6b362e48d559347150db7d1fed96"
+    },
+    {
+      "file": "results/E4_E5_thresholds/threshold_methods_summary.csv",
+      "rows": 5,
+      "md5": "f5307892bfc8a6e05733d9052aa0f834"
+    },
+    {
+      "file": "results/E4_E5_thresholds/assumed_contamination_by_seed.csv",
+      "rows": 25,
+      "md5": "e2c374114e574f227c1ba65c8e353979"
+    },
+    {
+      "file": "results/E4_E5_thresholds/assumed_contamination_summary.csv",
+      "rows": 5,
+      "md5": "a346591f10c0868ec32b94e2ce9b21d7"
+    }
+  ]
+}

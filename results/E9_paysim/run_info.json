@@ -1,0 +1,206 @@
+{
+  "experiment": "E9_paysim",
+  "notebook": "07_E9_paysim.ipynb",
+  "description": "PaySim representation, PCA ablation, contamination, diagnostics",
+  "started": "2026-11-22T14:41:36",
+  "finished": "2026-11-22T14:50:33",
+  "minutes": 8.95,
+  "seeds": [
+    42,
+    7,
+    21,
+    100,
+    2026
+  ],
+  "notes": "enhanced representation is exploratory (test set inspected in v5 Step 4D)",
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.4.6",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.6.1",
+    "scipy": "1.16.3",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "cpu_count": 2,
+    "rareguard_lib": "1.0",
+    "rareguard_lib_md5": "0ffc35a19a14ac38b8368451218abf8e",
+    "torch": "2.14.1+cu130",
+    "device": "Tesla T4"
+  },
+  "config": {
+    "project": "RAREGuard",
+    "data": {
+      "ulb_csv": "/content/drive/MyDrive/PhD/creditcard.csv",
+      "paysim_csv": "/content/drive/MyDrive/PhD/PS_20174392719_1491204439457_log.csv"
+    },
+    "seeds": [
+      42,
+      7,
+      21,
+      100,
+      2026
+    ],
+    "split": {
+      "test_size": 0.3,
+      "val_share_of_rest": 0.5
+    },
+    "features": {
+      "knn_impute_k": 5,
+      "variance_threshold": 1e-05,
+      "laplacian_k": 10,
+      "laplacian_sample": 5000,
+      "n_features": 20,
+      "pca_variance": 0.95
+    },
+    "detectors": {
+      "if_trees": 300,
+      "ocsvm_nu": 0.002,
+      "ocsvm_max_rows": 30000,
+      "ae_lr": 0.001,
+      "ae_batch": 1024,
+      "ae_epochs": 30,
+      "ae_patience": 5,
+      "ae_heldout_share": 0.1
+    },
+    "fusion_weights": {
+      "IF": 0.3,
+      "OCSVM": 0.3,
+      "AE": 0.4
+    },
+    "contamination": 0.002,
+    "label_assisted": {
+      "pmin": 80,
+      "pmax": 99.9,
+      "ngrid": 200
+    },
+    "e5_contamination_grid": [
+      0.001,
+      0.0015,
+      0.002,
+      0.003,
+      0.005
+    ],
+    "e6": {
+      "reference_size": 30000,
+      "fraud_shares": [
+        0.0,
+        0.001,
+        0.002,
+        0.005,
+        0.01
+      ]
+    },
+    "e8": {
+      "sizes": [
+        50000,
+        100000,
+        150000,
+        200000,
+        250000,
+        "all"
+      ],
+      "seed": 42
+    },
+    "paysim": {
+      "max_rows": 300000,
+      "sample_seed": 31415,
+      "ae_early_stopping": "heldout"
+    }
+  },
+  "files": [
+    {
+      "file": "results/E9_paysim/scores/paysim_baseline_seed42.npz",
+      "rows": null,
+      "md5": "ec6f2ca8ab18f630784d9bebffc12abf"
+    },
+    {
+      "file": "results/E9_paysim/scores/paysim_enhanced_seed42.npz",
+      "rows": null,
+      "md5": "ff96586d8e71d6610ba0ed0a0c40670d"
+    },
+    {
+      "file": "results/E9_paysim/scores/paysim_baseline_seed7.npz",
+      "rows": null,
+      "md5": "1080e31b0ede4ab4b25b82067630d33e"
+    },
+    {
+      "file": "results/E9_paysim/scores/paysim_enhanced_seed7.npz",
+      "rows": null,
+      "md5": "2428098ee23055f640f70eddf36a30c6"
+    },
+    {
+      "file": "results/E9_paysim/scores/paysim_baseline_seed21.npz",
+      "rows": null,
+      "md5": "7ab4de42a2b61ffae78ca15862ae60e3"
+    },
+    {
+      "file": "results/E9_paysim/scores/paysim_enhanced_seed21.npz",
+      "rows": null,
+      "md5": "49f9fe7e174a5b46aa47525e357307a9"
+    },
+    {
+      "file": "results/E9_paysim/scores/paysim_baseline_seed100.npz",
+      "rows": null,
+      "md5": "22c614ee6401cf783951d1618b60b147"
+    },
+    {
+      "file": "results/E9_paysim/scores/paysim_enhanced_seed100.npz",
+      "rows": null,
+      "md5": "c86161ce7aff8df361eaf74f067ac9d1"
+    },
+    {
+      "file": "results/E9_paysim/scores/paysim_baseline_seed2026.npz",
+      "rows": null,
+      "md5": "ce83d80843d7e13890b529aff6bb20a9"
+    },
+    {
+      "file": "results/E9_paysim/scores/paysim_enhanced_seed2026.npz",
+      "rows": null,
+      "md5": "f0406c9745a674d3274f533f6fb61be8"
+    },
+    {
+      "file": "results/E9_paysim/representation_by_seed.csv",
+      "rows": 10,
+      "md5": "929308b9c83f0771a1801eabb553a71d"
+    },
+    {
+      "file": "results/E9_paysim/representation_summary.csv",
+      "rows": 2,
+      "md5": "d454ae0c554916e623f8adea3c833f17"
+    },
+    {
+      "file": "results/E9_paysim/pca_ablation_by_seed.csv",
+      "rows": 10,
+      "md5": "0601b25ab7d945be611f4e5e8190fe26"
+    },
+    {
+      "file": "results/E9_paysim/pca_ablation_summary.csv",
+      "rows": 2,
+      "md5": "b5bef1fb8b33525ee2291880b3adcc03"
+    },
+    {
+      "file": "results/E9_paysim/contamination_by_seed.csv",
+      "rows": 25,
+      "md5": "aed653e533d5505e2809667c44aba3d9"
+    },
+    {
+      "file": "results/E9_paysim/contamination_summary.csv",
+      "rows": 5,
+      "md5": "fe88dbb49d6b3cb72c1e81d509a0db60"
+    },
+    {
+      "file": "results/E9_paysim/detection_by_type_seed42.csv",
+      "rows": 5,
+      "md5": "68352312b3e6a52c1f4bc7e3b4c4740c"
+    },
+    {
+      "file": "results/E9_paysim/fraud_by_amount.csv",
+      "rows": 5,
+      "md5": "a1b8c33b5cbf073a15f218244be22bb5"
+    },
+    {
+      "file": "results/E9_paysim/score_summary_seed42.csv",
+      "rows": 2,
+      "md5": "def5f915a9ea299f13bfe975344502cb"
+    }
+  ]
+}
