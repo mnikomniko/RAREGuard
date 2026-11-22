@@ -3,7 +3,7 @@ message: "If you use this software or its results, please cite it as below."
 title: "RAREGuard: Hybrid one-class fraud detection with fraud-label-free threshold calibration"
 version: 2.0.0
 date-released: 2026-11-22
-doi: 10.5281/zenodo.XXXXXXXX   # replace with the version DOI Zenodo assigns to release v2.0.0
+doi: doi: 10.5281/zenodo.24447609   # replace with the version DOI Zenodo assigns to release v2.0.0
 license: MIT
 repository-code: "https://github.com/mnikomniko/RAREGuard"
 type: software
