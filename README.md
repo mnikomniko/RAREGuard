@@ -24,10 +24,6 @@ tools/verify_results.py    checks the archived results without data or GPU
 ```
 
 
-## Before publishing (authors only)
-
-The fixed splits (`data/splits/`) and the saved score files (`results/E1_components/scores/`, `results/E9_paysim/scores/`) were produced on Google Drive. Paste `tools/complete_package_colab.py` into a Colab cell and run it once to add them; it also runs the verification below and downloads the complete package. Remove this section afterwards.
-
 
 ## Check the results in two minutes (no data, no GPU)
 
@@ -99,7 +95,7 @@ Common columns: `Seed`, the condition column, `Precision`, `Recall`, `F1`, `MCC`
 
 See `CITATION.cff`. Please cite the article and this software:
 
-> M. S. Mniko, W. Mwangi, and E. M. Karanja, "RAREGuard: Hybrid one-class fraud detection with fraud-label-free threshold calibration (software, version 2.0.0)," Zenodo, 2026, doi: 10.5281/zenodo.XXXXXXXX.
+> M. S. Mniko, W. Mwangi, and E. M. Karanja, "RAREGuard: Hybrid one-class fraud detection with fraud-label-free threshold calibration (software, version 2.0.0)," Zenodo, 2026, doi: 10.5281/zenodo.24447609.
 
 The first release (1.0.0) is at doi: 10.5281/zenodo.21852872. Changes are listed in `CHANGELOG.md`.
 
